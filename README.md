@@ -1,1 +1,1 @@
-# SigmaSurvival.github.io
+# SolarSMP.github.io
