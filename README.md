@@ -1,1 +1,1 @@
-# SolarSMP.github.io
+# solarsmp.cloud-ip.cc
