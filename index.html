@@ -60,6 +60,8 @@
     <section class="hero">
         <h1>Solar SMP</h1>
         <p>Best Vanilla Minecraft SMP.</p>
+        
+        <!-- 🗺️ SERVER IP COPY CARD -->
         <div class="ip-card" onclick="copyIp()">
             <div>
                 <div class="ip-label">Server IP Address</div>
@@ -67,6 +69,16 @@
             </div>
             <button class="copy-btn" id="btnText">Copy IP</button>
         </div>
+
+        <!-- 🔌 SERVER PORT COPY CARD -->
+        <div class="ip-card" onclick="copyPort()">
+            <div>
+                <div class="ip-label">Server Port</div>
+                <div class="ip-address" id="serverPort">20111</div>
+            </div>
+            <button class="copy-btn" id="btnPortText">Copy Port</button>
+        </div>
+
         <a href="https://discord.gg" target="_blank" class="discord-btn">
             <span class="discord-icon">💬</span> Join Our Discord
         </a>
@@ -91,6 +103,25 @@
         </div>
     </section>
     <div class="toast" id="copyToast">IP Copied to Clipboard! Ready to Play.</div>
-    <script>function copyIp(){const e=document.getElementById("serverIp").innerText;navigator.clipboard.writeText(e).then(()=>{const e=document.getElementById("copyToast"),t=document.getElementById("btnText");t.innerText="Copied!",e.classList.add("show"),setTimeout(function(){e.classList.remove("show"),t.innerText="Copy IP"},2500)})}</script>
+    
+    <script>
+        function copyIp(){
+            const e=document.getElementById("serverIp").innerText;
+            navigator.clipboard.writeText(e).then(()=>{
+                const e=document.getElementById("copyToast"),t=document.getElementById("btnText");
+                e.innerText="IP Copied to Clipboard! Ready to Play.";
+                t.innerText="Copied!",e.classList.add("show"),setTimeout(function(){e.classList.remove("show"),t.innerText="Copy IP"},2500)
+            })
+        }
+
+        function copyPort(){
+            const e=document.getElementById("serverPort").innerText;
+            navigator.clipboard.writeText(e).then(()=>{
+                const e=document.getElementById("copyToast"),t=document.getElementById("btnPortText");
+                e.innerText="Port Copied to Clipboard! Ready to Play.";
+                t.innerText="Copied!",e.classList.add("show"),setTimeout(function(){e.classList.remove("show"),t.innerText="Copy Port"},2500)
+            })
+        }
+    </script>
 </body>
 </html>
